@@ -4,8 +4,8 @@ import Button from "react-bootstrap/Button";
 class ButtonPrimary extends React.Component {
   render() {
     return (
-      <Button size="lg" variant="outline-info" className="mt-3">
-        Add new {this.props.clothes.type.body}
+      <Button size="lg" className="custom-btn mt-3">
+        Add New {this.props.type}
       </Button>
     );
   }

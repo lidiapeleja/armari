@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-btn {
+  padding: 3rem;
+  margin: 1rem;
+  border-color: transparent;
+  background-color: #f73558;
+  color: white;
+}
