@@ -1,8 +1,9 @@
-import ButtonPrimary from "./ButtonPrimary";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import AddItem from "./AddItem";
+
 import "./App.css";
 
 import React from "react";
@@ -17,6 +18,7 @@ class App extends React.Component {
         type: ["Body", "Leggins", "Shirt", "Dress", "Pijamas", "Jacket"],
         size: [46, 48, 50, 52, 54, 56, 58, 60],
       },
+      totalStock: 0,
     };
   }
 
@@ -36,27 +38,33 @@ class App extends React.Component {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel">
-                  Armari App - sort your baby clothes!
+                  Armari App
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Router>
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link key="home" to="/">
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/about">About</Link>
+                      <Link key="about" to="/about">
+                        About
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/add-item">Add Item</Link>
+                      <Link key="additem" to="/add-item">
+                        Add Item
+                      </Link>
                     </li>
                     <Routes>
                       <Route exact path="/">
-                        Home
+                        Home{" "}
                       </Route>
-                      <Route path="/add-item">Add Item</Route>
-                      <Route path="/about">About</Route>
+                      <Route path="/add-item">Add Item </Route>
+                      <Route path="/about">About </Route>
                     </Routes>
                   </Router>
                 </Nav>
@@ -64,23 +72,50 @@ class App extends React.Component {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
-        <div className="App-header mt-3">
-          <h3 className="pt-3">
+        <div className="App-header pt-5">
+          <h3 className="pt-5">
             Add new clothes for <code>{this.state.babyName}</code>.
           </h3>
+          <div className="figures mt-5">
+            <h4>Number of clothes in wardrobe: {this.state.totalStock}</h4>
+          </div>
           <div className="mt-5">
             {this.state.clothes.type.map((types) => (
-              <ButtonPrimary
-                key={types}
-                type={types}
-                className={types}
-              ></ButtonPrimary>
+              <Router>
+                <Link
+                  to="/add-item"
+                  className="custom-btn btn mt-5"
+                  key={types}
+                  type={types}
+                >
+                  Add New {types}
+                </Link>
+              </Router>
             ))}
+          </div>
+          <div>
+            <AddItem></AddItem>
           </div>
         </div>
       </div>
     );
   }
+}
+
+function Home() {
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2>Abooout</h2>
+    </div>
+  );
 }
 
 export default App;
