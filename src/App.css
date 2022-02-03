@@ -1,5 +1,4 @@
 .App {
-  background-color: #fafafa;
   min-height: 90vh - 56mm;
 }
 
@@ -17,4 +16,14 @@ h4 {
 
 .paragraph {
   margin-top: 1rem;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.navbar {
+  background-color: #f3f3f3;
 }

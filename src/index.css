@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
-
+  background-color: #fafafa;
 }
 
 code {
@@ -22,4 +21,6 @@ code {
   color: #f73558;
   border-radius: 6px;
   box-shadow: rgba(14, 14, 15, 0.2) 0px 7px 29px 0px;
+  min-width: 16rem;
+  font-size: 1.2rem;
 }

@@ -1,15 +1,14 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 class Home extends React.Component {
   render() {
     return (
-      <Container fluid>
+      <Container className="section" fluid="md">
         <Row>
           <Col>
             <h1>
-              Add new clothes for <code>{this.props.babyName}</code>
+              <code>{this.props.babyName}</code>'s Wardrobe
             </h1>
             <div className="section">
               <h4>
@@ -17,7 +16,7 @@ class Home extends React.Component {
                 <code>{this.props.totalStock}</code>
               </h4>
             </div>
-            <div class="section">
+            <div className="section buttons-wrapper">
               {this.props.clothesType.map((types) => (
                 <a
                   href="/add-item"
@@ -25,7 +24,11 @@ class Home extends React.Component {
                   key={types}
                   type={types}
                 >
-                  Add New {types}
+                  <img
+                    alt={types}
+                    src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
+                  />
+                  Add {types}
                 </a>
               ))}
             </div>
