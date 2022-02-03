@@ -4,7 +4,7 @@ import Navigation from "./Nav";
 import AddItem from "./AddItem";
 import Home from "./Home";
 import About from "./About";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {

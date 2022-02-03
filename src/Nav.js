@@ -9,11 +9,9 @@ class Navigation extends React.Component {
   render() {
     return (
       <div className="Nav">
-        <Navbar bg="light" expand={false}>
+        <Navbar bg="dark" expand={false}>
           <Container fluid>
-            <Navbar.Brand>
-              <Link to="/"> Armari App - sort your baby clothes!</Link>
-            </Navbar.Brand>
+            <Navbar.Brand>Armari App</Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"

@@ -5,17 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  padding: 5px;
 }
 
 .custom-btn {
-  padding: 3rem;
-  margin: 1rem;
+  padding: 3rem 1.5rem;
+  margin: .75rem;
   border-color: transparent;
-  background-color: #f73558;
-  color: white;
+  color: #f73558;
+  border-radius: 6px;
+  box-shadow: rgba(14, 14, 15, 0.2) 0px 7px 29px 0px;
 }
