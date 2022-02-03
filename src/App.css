@@ -4,7 +4,7 @@
 
 .App-header {
   background-color: #fafafa;
-  min-height: 90vh;
+  min-height: 90vh - 56mm;
   align-items: center;
   justify-content: center;
   color: rgb(51, 51, 51);

@@ -24,9 +24,6 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Navigation />
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/add-item">Add Item</Link>
           <Routes>
             <Route
               index

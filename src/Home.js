@@ -4,7 +4,6 @@ class Home extends React.Component {
   render() {
     return (
       <div className="App-header pt-5">
-        <h1>Home</h1>
         <h3 className="pt-5">
           Add new clothes for <code>{this.props.babyName}</code>.
         </h3>

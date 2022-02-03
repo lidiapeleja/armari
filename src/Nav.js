@@ -11,8 +11,8 @@ class Navigation extends React.Component {
       <div className="Nav">
         <Navbar bg="light" expand={false}>
           <Container fluid>
-            <Navbar.Brand href="/">
-              Armari App - sort your baby clothes!
+            <Navbar.Brand>
+              <Link to="/"> Armari App - sort your baby clothes!</Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
@@ -27,8 +27,9 @@ class Navigation extends React.Component {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link to="/about">About</Link>
+                  <Link to="/">Home</Link>
                   <Link to="/add-item">Add Item</Link>
+                  <Link to="/about">About</Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
