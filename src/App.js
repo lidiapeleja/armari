@@ -47,15 +47,44 @@ class App extends React.Component {
       clothesType: [
         {
           type: "body",
-          img: "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
         },
-        { type: "leggins" },
-        { type: "shirt" },
-        { type: "dress" },
-        { type: "pijamas" },
-        { type: "jaquet" },
-        { type: "socks" },
-        { type: "shoes" },
+        {
+          type: "leggins",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "shirt",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "dress",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "pijamas",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "jaquet",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "socks",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        {
+          type: "shoes",
+          imgUrl:
+            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
       ],
     };
   }
@@ -72,14 +101,19 @@ class App extends React.Component {
                 <Home
                   babyName={this.state.babyName}
                   totalStock={this.state.totalStock}
-                  globalState={this.state}
-                  clothesType={this.state.clothes.type}
+                  typeOfClothes={this.state.clothesType}
+                  clothesURL={this.state.clothesType.img}
                 />
               }
             />
             <Route
               path="add-item"
-              element={<AddItem clothesSize={this.state.clothesSize} />}
+              element={
+                <AddItem
+                  clothesSize={this.state.clothesSize}
+                  babyName={this.state.babyName}
+                />
+              }
             />
             <Route path="about" element={<About />} />
           </Routes>

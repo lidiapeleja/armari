@@ -40,7 +40,9 @@ class AddItem extends React.Component {
                 <div className="paragraph">
                   <FloatingLabel controlId="floatingSelect" label="Belongs to">
                     <Form.Select aria-label="Belongs to">
-                      <option value="50">Laia</option>
+                      <option value={this.props.babyName}>
+                        {this.props.babyName}
+                      </option>
                       <option value="52">Lorena</option>
                       <option value="54">Nur</option>
                     </Form.Select>

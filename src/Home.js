@@ -17,18 +17,14 @@ class Home extends React.Component {
               </h4>
             </div>
             <div className="section buttons-wrapper">
-              {this.props.clothesType.map((types) => (
+              {this.props.typeOfClothes.map((clothes) => (
                 <a
                   href="/add-item"
                   className="custom-btn btn paragraph"
-                  key={types}
-                  type={types}
+                  key={clothes.type}
                 >
-                  <img
-                    alt={types}
-                    src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
-                  />
-                  Add {types}
+                  <img alt={clothes.type} src={clothes.imgUrl} />
+                  Add {clothes.type}
                 </a>
               ))}
             </div>
