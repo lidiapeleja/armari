@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import Navigation from "./Nav";
+import Navigation from "./Navigation";
 import AddItem from "./AddItem";
 import Home from "./Home";
 import About from "./About";
@@ -12,13 +12,29 @@ class App extends React.Component {
     super(props);
     this.state = {
       babyName: "Laia",
+      totalStock: 0,
       clothes: {
         type: ["Body", "Leggins", "Shirt", "Dress", "Pijamas", "Jacket"],
         logoURL:
           "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
-        size: [46, 48, 50, 52, 54, 56, 58, 60],
       },
-      totalStock: 0,
+      clothesSize: [
+        46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
+      ],
+      shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
+      clothesType: [
+        {
+          type: "body",
+          img: "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+        },
+        { type: "leggins" },
+        { type: "shirt" },
+        { type: "dress" },
+        { type: "pijamas" },
+        { type: "jaquet" },
+        { type: "socks" },
+        { type: "shoes" },
+      ],
     };
   }
 

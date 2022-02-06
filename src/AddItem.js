@@ -1,6 +1,13 @@
 import React from "react";
 import { FloatingLabel } from "react-bootstrap";
-import { Form, Container, Row, Col } from "react-bootstrap";
+import {
+  Form,
+  Container,
+  Row,
+  Col,
+  ButtonGroup,
+  Button,
+} from "react-bootstrap";
 
 class AddItem extends React.Component {
   render() {
@@ -21,16 +28,12 @@ class AddItem extends React.Component {
                   </FloatingLabel>
                 </div>
                 <div className="paragraph">
-                  <FloatingLabel
-                    controlId="floatingSelect"
-                    label="Select season"
-                  >
-                    <Form.Select aria-label="Season">
-                      <option value="50">Hot</option>
-                      <option value="52">Mild</option>
-                      <option value="54">Cold</option>
-                    </Form.Select>
-                  </FloatingLabel>
+                  Select Clothe's season
+                  <ButtonGroup size="lg" className="mb-2">
+                    <Button>Summer Season</Button>
+                    <Button>Spring/Fall Season</Button>
+                    <Button>Winter Season</Button>
+                  </ButtonGroup>
                 </div>
                 <div className="paragraph">
                   <FloatingLabel controlId="floatingSelect" label="Belongs to">
