@@ -22,6 +22,28 @@ class App extends React.Component {
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
       ],
       shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
+      owners: [
+        {
+          name: "Lorena",
+          phoneNumber: +4917621660725,
+          email: "lidiapeleja@gmail.com",
+        },
+        {
+          name: "Mireia",
+          phoneNumber: +4917621660725,
+          email: "lidiapeleja@gmail.com",
+        },
+        {
+          name: "Laia",
+          phoneNumber: +4917621660725,
+          email: "lidiapeleja@gmail.com",
+        },
+        {
+          name: "Eva",
+          phoneNumber: +4917621660725,
+          email: "lidiapeleja@gmail.com",
+        },
+      ],
       clothesType: [
         {
           type: "body",
@@ -55,7 +77,10 @@ class App extends React.Component {
                 />
               }
             />
-            <Route path="add-item" element={<AddItem />} />
+            <Route
+              path="add-item"
+              element={<AddItem clothesSize={this.state.clothesSize} />}
+            />
             <Route path="about" element={<About />} />
           </Routes>
         </Router>

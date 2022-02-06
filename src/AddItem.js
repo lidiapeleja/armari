@@ -21,9 +21,11 @@ class AddItem extends React.Component {
                 <div className="section">
                   <FloatingLabel controlId="floatingSelect" label="Select size">
                     <Form.Select aria-label="Size">
-                      <option value="50">50</option>
-                      <option value="52">52</option>
-                      <option value="54">54</option>
+                      {this.props.clothesSize.map((size) => (
+                        <option value={size} key={size}>
+                          {size}
+                        </option>
+                      ))}
                     </Form.Select>
                   </FloatingLabel>
                 </div>
