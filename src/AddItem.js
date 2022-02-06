@@ -50,7 +50,7 @@ class AddItem extends React.Component {
                 </div>
                 <div className="paragraph">
                   <Form.Group controlId="formFileLg" className="mb-3">
-                    <Form.Label>Upload Picture</Form.Label>
+                    <Form.Label>Upload Clothe's Picture</Form.Label>
                     <Form.Control type="file" size="lg" />
                   </Form.Group>
                 </div>

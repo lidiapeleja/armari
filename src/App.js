@@ -6,18 +6,15 @@ import Home from "./Home";
 import About from "./About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../node_modules/hamburgers/dist/hamburgers.css";
+import Breadcrumbs from "./Breadcrumb";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       babyName: "Laia",
       totalStock: 0,
-      clothes: {
-        type: ["Body", "Leggins", "Shirt", "Dress", "Pijamas", "Jacket"],
-        logoURL:
-          "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
-      },
       clothesSize: [
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
       ],
@@ -94,6 +91,7 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Navigation />
+          <Breadcrumbs />
           <Routes>
             <Route
               index

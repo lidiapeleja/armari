@@ -11,7 +11,9 @@ class Navigation extends React.Component {
       <div className="Nav">
         <Navbar expand={false}>
           <Container fluid>
-            <Navbar.Brand>Armari App</Navbar.Brand>
+            <Navbar.Brand>
+              <Link to="/"> Armari App</Link>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"
@@ -20,7 +22,7 @@ class Navigation extends React.Component {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel">
-                  Armari App
+                  <Link to="/"> Armari App</Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
