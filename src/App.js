@@ -7,11 +7,18 @@ import About from "./About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../node_modules/hamburgers/dist/hamburgers.css";
 import Breadcrumbs from "./Breadcrumb";
+import bodyURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-onesies-100.png";
+import legginsURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-red-children's-tights-100.png";
+import pijamasURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-sleep-100.png";
+import shirtURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-t-shirt-100.png";
+import dressURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-dress-front-view-100.png";
+import jacketURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-jacket-100.png";
+import socksURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-pair-of-socks-100.png";
+import shoesURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-pair-of-sneakers-100.png";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       babyName: "Laia",
       totalStock: 0,
@@ -44,43 +51,35 @@ class App extends React.Component {
       clothesType: [
         {
           type: "body",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(bodyURL),
         },
         {
           type: "leggins",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(legginsURL),
         },
         {
           type: "shirt",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(shirtURL),
         },
         {
           type: "dress",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(dressURL),
         },
         {
           type: "pijamas",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(pijamasURL),
         },
         {
           type: "jaquet",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(jacketURL),
         },
         {
           type: "socks",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(socksURL),
         },
         {
           type: "shoes",
-          imgUrl:
-            "https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-clothes-baby-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png",
+          imgUrl: String(shoesURL),
         },
       ],
     };

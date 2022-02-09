@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 class Home extends React.Component {
   render() {
     return (
-      <Container className="section" fluid="md">
+      <Container className="paragraph" fluid="md">
         <Row>
           <Col>
             <h1>
