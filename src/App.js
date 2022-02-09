@@ -9,7 +9,7 @@ import "../node_modules/hamburgers/dist/hamburgers.css";
 import Breadcrumbs from "./Breadcrumb";
 import bodyURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-onesies-100.png";
 import legginsURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-red-children's-tights-100.png";
-import pijamasURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-sleep-100.png";
+import pijamasURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-men's-pajama-100.png";
 import shirtURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-t-shirt-100.png";
 import dressURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-dress-front-view-100.png";
 import jacketURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-jacket-100.png";

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "./Home.css";
 
 class Home extends React.Component {
   render() {
@@ -20,7 +21,7 @@ class Home extends React.Component {
               {this.props.typeOfClothes.map((clothes) => (
                 <a
                   href="/add-item"
-                  className="custom-btn btn paragraph"
+                  className="custom-btn paragraph"
                   key={clothes.type}
                 >
                   <img alt={clothes.type} src={clothes.imgUrl} />

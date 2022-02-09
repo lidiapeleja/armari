@@ -1,0 +1,12 @@
+.custom-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.custom-btn img {
+    width: 35%;
+    padding-bottom: 15px;
+}
