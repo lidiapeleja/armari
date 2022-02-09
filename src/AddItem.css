@@ -1,0 +1,13 @@
+.upload-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .3rem;
+    background-color: #fff;
+}
+
+.form-label {
+    margin-bottom: 0.1rem !important;
+}

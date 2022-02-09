@@ -8,6 +8,8 @@ import {
   ButtonGroup,
   Button,
 } from "react-bootstrap";
+import "./AddItem.css";
+import uploadImg from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-image-100.png";
 
 class AddItem extends React.Component {
   render() {
@@ -31,7 +33,7 @@ class AddItem extends React.Component {
                 </div>
                 <div className="paragraph">
                   Select Clothe's season
-                  <ButtonGroup size="lg" className="mb-2">
+                  <ButtonGroup className="mb-2">
                     <Button>Summer Season</Button>
                     <Button>Spring/Fall Season</Button>
                     <Button>Winter Season</Button>
@@ -49,18 +51,15 @@ class AddItem extends React.Component {
                   </FloatingLabel>
                 </div>
                 <div className="paragraph">
-                  <Form.Group controlId="formFileLg" className="mb-3">
+                  <Form.Group controlId="formFileLg" className="mb-1">
                     <Form.Label>Upload Clothe's Picture</Form.Label>
                     <Form.Control type="file" size="lg" />
                   </Form.Group>
                 </div>
               </Col>
               <Col xs={12} md={6}>
-                <div className="section">
-                  <img
-                    alt="bla blabla"
-                    src="https://images.pexels.com/photos/6951990/pexels-photo-6951990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=360"
-                  />
+                <div className="paragraph upload-image">
+                  <img alt="bla blabla" src={String(uploadImg)} />
                 </div>
               </Col>
             </Row>
