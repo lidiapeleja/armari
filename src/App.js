@@ -27,6 +27,7 @@ class App extends React.Component {
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
       ],
       clothesSeason: ["Summer Season", "Fall/Spring Season", "Winter Season"],
+      clothesState: ["new", "used"],
       shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
       owners: [
         {
@@ -113,6 +114,7 @@ class App extends React.Component {
                   clothesSize={this.state.clothesSize}
                   babyName={this.state.babyName}
                   clothesSeason={this.state.clothesSeason}
+                  clothesState={this.state.clothesState}
                 />
               }
             />

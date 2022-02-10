@@ -16,7 +16,7 @@ class AddItem extends React.Component {
     return (
       <div>
         <Container className="section">
-          <h1>Add new Item</h1>
+          <h1>Add New Item</h1>
           <Container fluid="md">
             <Row>
               <Col xs={12} md={6}>
@@ -55,6 +55,26 @@ class AddItem extends React.Component {
                       <option value="54">Nur</option>
                     </Form.Select>
                   </FloatingLabel>
+                </div>
+                <div className="paragraph d-flex flex-column">
+                  Select Clothe's State
+                  <ButtonGroup size="lg" className="mb-2">
+                    {this.props.clothesState.map((state) => (
+                      <Button variant="outline-dark" value={state} key={state}>
+                        {state}
+                      </Button>
+                    ))}
+                  </ButtonGroup>
+                </div>
+
+                <div class="paragraph">
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Comments</Form.Label>
+                    <Form.Control as="textarea" rows={4} />
+                  </Form.Group>
                 </div>
                 <div className="paragraph">
                   <Form.Group controlId="formFileLg" className="mb-1">

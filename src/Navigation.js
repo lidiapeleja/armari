@@ -28,8 +28,8 @@ class Navigation extends React.Component {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Link to="/">Home</Link>
-                  <Link to="/add-item">Add Item</Link>
-                  <Link to="/about">About</Link>
+                  <Link to="/add-item">Add New Item</Link>
+                  <Link to="/about">About Armari App</Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
