@@ -13,10 +13,8 @@ const Breadcrumbs = () => {
           <Breadcrumb className="paragraph">
             <React.Fragment>
               {breadcrumbs.map(({ breadcrumb }) => (
-                <div className="breadcrumb-item">
-                  <Link key={breadcrumb.key} to={breadcrumb.key}>
-                    {breadcrumb}
-                  </Link>
+                <div key={breadcrumb.key} className="breadcrumb-item">
+                  <Link to={breadcrumb.key}>{breadcrumb}</Link>
                 </div>
               ))}
             </React.Fragment>

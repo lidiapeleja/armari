@@ -21,10 +21,12 @@ class App extends React.Component {
     super(props);
     this.state = {
       babyName: "Laia",
+      currentBabySize: 50,
       totalStock: 0,
       clothesSize: [
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
       ],
+      clothesSeason: ["Summer Season", "Fall/Spring Season", "Winter Season"],
       shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
       owners: [
         {
@@ -97,6 +99,7 @@ class App extends React.Component {
               element={
                 <Home
                   babyName={this.state.babyName}
+                  currentBabySize={this.state.currentBabySize}
                   totalStock={this.state.totalStock}
                   typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
@@ -109,6 +112,7 @@ class App extends React.Component {
                 <AddItem
                   clothesSize={this.state.clothesSize}
                   babyName={this.state.babyName}
+                  clothesSeason={this.state.clothesSeason}
                 />
               }
             />

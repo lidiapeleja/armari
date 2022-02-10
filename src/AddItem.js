@@ -34,9 +34,15 @@ class AddItem extends React.Component {
                 <div className="paragraph">
                   Select Clothe's season
                   <ButtonGroup size="lg" className="mb-2">
-                    <Button variant="outline-dark">Summer Season</Button>
-                    <Button variant="outline-dark">Spring/Fall Season</Button>
-                    <Button variant="outline-dark">Winter Season</Button>
+                    {this.props.clothesSeason.map((season) => (
+                      <Button
+                        variant="outline-dark"
+                        value={season}
+                        key={season}
+                      >
+                        {season}
+                      </Button>
+                    ))}
                   </ButtonGroup>
                 </div>
                 <div className="paragraph">
@@ -60,6 +66,13 @@ class AddItem extends React.Component {
               <Col xs={12} md={6}>
                 <div className="paragraph upload-image">
                   <img alt="bla blabla" src={String(uploadImg)} />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <div className="article d-flex justify-content-center">
+                  <Button size="lg">Save Item</Button>
                 </div>
               </Col>
             </Row>
