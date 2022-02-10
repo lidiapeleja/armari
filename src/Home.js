@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Home.css";
-
+import { Link } from "react-router-dom";
 class Home extends React.Component {
   render() {
     return (
@@ -19,14 +19,14 @@ class Home extends React.Component {
             </div>
             <div className="section buttons-wrapper">
               {this.props.typeOfClothes.map((clothes) => (
-                <a
-                  href="/add-item"
+                <Link
+                  to="/add-item"
                   className="custom-btn paragraph"
                   key={clothes.type}
                 >
                   <img alt={clothes.type} src={clothes.imgUrl} />
                   Add {clothes.type}
-                </a>
+                </Link>
               ))}
             </div>
           </Col>

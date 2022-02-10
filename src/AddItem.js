@@ -17,7 +17,7 @@ class AddItem extends React.Component {
       <div>
         <Container className="section">
           <h1>Add new Item</h1>
-          <Container>
+          <Container fluid="md">
             <Row>
               <Col xs={12} md={6}>
                 <div className="section">
@@ -33,10 +33,10 @@ class AddItem extends React.Component {
                 </div>
                 <div className="paragraph">
                   Select Clothe's season
-                  <ButtonGroup className="mb-2">
-                    <Button>Summer Season</Button>
-                    <Button>Spring/Fall Season</Button>
-                    <Button>Winter Season</Button>
+                  <ButtonGroup size="lg" className="mb-2">
+                    <Button variant="outline-dark">Summer Season</Button>
+                    <Button variant="outline-dark">Spring/Fall Season</Button>
+                    <Button variant="outline-dark">Winter Season</Button>
                   </ButtonGroup>
                 </div>
                 <div className="paragraph">
