@@ -27,6 +27,7 @@ class Home extends React.Component {
                   to="/add-item"
                   className="custom-btn paragraph"
                   key={clothes.type}
+                  onClick={this.props.handleClick}
                 >
                   <img alt={clothes.type} src={clothes.imgUrl} />
                   Add {clothes.type}

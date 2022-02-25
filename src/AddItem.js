@@ -21,7 +21,10 @@ class AddItem extends React.Component {
             <Row>
               <Col xs={12} md={6}>
                 <div className="section">
-                  <FloatingLabel controlId="floatingSelect" label="Select size">
+                  <FloatingLabel
+                    controlId="floatingSelect"
+                    label="Select size*"
+                  >
                     <Form.Select aria-label="Size">
                       {this.props.clothesSize.map((size) => (
                         <option value={size} key={size}>
@@ -32,7 +35,7 @@ class AddItem extends React.Component {
                   </FloatingLabel>
                 </div>
                 <div className="paragraph">
-                  Select Clothe's season
+                  Select Clothe's season*
                   <ButtonGroup size="lg" className="mb-2">
                     {this.props.clothesSeason.map((season) => (
                       <Button
@@ -46,7 +49,7 @@ class AddItem extends React.Component {
                   </ButtonGroup>
                 </div>
                 <div className="paragraph">
-                  <FloatingLabel controlId="floatingSelect" label="Belongs to">
+                  <FloatingLabel controlId="floatingSelect" label="Belongs to*">
                     <Form.Select aria-label="Belongs to">
                       <option value={this.props.babyName}>
                         {this.props.babyName}
@@ -67,7 +70,7 @@ class AddItem extends React.Component {
                   </ButtonGroup>
                 </div>
 
-                <div class="paragraph">
+                <div className="paragraph">
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlTextarea1"

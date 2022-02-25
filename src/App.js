@@ -19,6 +19,7 @@ import shoesURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armar
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
     this.state = {
       babyName: "Laia",
       currentBabySize: 50,
@@ -88,6 +89,11 @@ class App extends React.Component {
     };
   }
 
+  handleClick() {
+    // Changing state
+    this.setState({ totalStock: this.state.totalStock + 1 });
+  }
+
   render() {
     return (
       <div className="App">
@@ -104,6 +110,7 @@ class App extends React.Component {
                   totalStock={this.state.totalStock}
                   typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
+                  handleClick={this.handleClick}
                 />
               }
             />
