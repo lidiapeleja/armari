@@ -21,6 +21,7 @@ class App extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
+      apiResponse: "",
       babyName: "Laia",
       currentBabySize: 50,
       totalStock: 0,
@@ -89,6 +90,16 @@ class App extends React.Component {
     };
   }
 
+  callAPI() {
+    fetch("http://localhost:9000/testAPI")
+      .then((res) => res.text())
+      .then((res) => this.setState({ apiResponse: res }));
+  }
+
+  componentWillMount() {
+    this.callAPI();
+  }
+
   handleClick() {
     // Changing state
     this.setState({ totalStock: this.state.totalStock + 1 });
@@ -128,6 +139,7 @@ class App extends React.Component {
             <Route path="about" element={<About />} />
           </Routes>
         </Router>
+        <p className="App-intro">;{this.state.apiResponse}</p>
       </div>
     );
   }
