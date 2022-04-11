@@ -14,6 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+## `nodemon`
+
+Starts the server inside routes/testAPI.js and re-starts server anytime a change has been taken place.
+
+More info at: https://www.npmjs.com/package/nodemon
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
