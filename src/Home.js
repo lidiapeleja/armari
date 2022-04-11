@@ -34,7 +34,7 @@ class Home extends React.Component {
                     to="/add-item"
                     className="custom-btn paragraph col"
                     key={clothes.type}
-                    onClick={this.props.handleClick}
+                    saveItem={this.props.saveItem}
                   >
                     <img alt={clothes.type} src={clothes.imgUrl} />
                     Add {clothes.type}

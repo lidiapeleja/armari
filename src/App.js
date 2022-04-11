@@ -103,6 +103,13 @@ class App extends React.Component {
   handleClick() {
     // Changing state
     this.setState({ totalStock: this.state.totalStock + 1 });
+    console.log("handleClick() has been called");
+  }
+
+  saveItem() {
+    // Changing state
+    this.setState({ totalStock: this.state.totalStock + 1 });
+    console.log("saveItem() has been called");
   }
 
   render() {
@@ -121,7 +128,7 @@ class App extends React.Component {
                   totalStock={this.state.totalStock}
                   typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
-                  handleClick={this.handleClick}
+                  saveItem={this.saveItem}
                 />
               }
             />
@@ -133,6 +140,7 @@ class App extends React.Component {
                   babyName={this.state.babyName}
                   clothesSeason={this.state.clothesSeason}
                   clothesState={this.state.clothesState}
+                  owners={this.state.owners}
                 />
               }
             />

@@ -12,6 +12,9 @@ import "./AddItem.css";
 import uploadImg from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-image-100.png";
 
 class AddItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
@@ -21,11 +24,11 @@ class AddItem extends React.Component {
             <Row>
               <Col xs={12} md={6}>
                 <div className="section">
-                  <FloatingLabel
-                    controlId="floatingSelect"
-                    label="Select size*"
-                  >
+                  <FloatingLabel controlId="floatingSize" label="Select size*">
                     <Form.Select aria-label="Size">
+                      <option key="unselected-size" value="unselected-size">
+                        Not selected
+                      </option>
                       {this.props.clothesSize.map((size) => (
                         <option value={size} key={size}>
                           {size}
@@ -49,13 +52,16 @@ class AddItem extends React.Component {
                   </ButtonGroup>
                 </div>
                 <div className="paragraph">
-                  <FloatingLabel controlId="floatingSelect" label="Belongs to*">
+                  <FloatingLabel controlId="floatingOwner" label="Belongs to*">
                     <Form.Select aria-label="Belongs to">
-                      <option value={this.props.babyName}>
-                        {this.props.babyName}
+                      <option key="unselected-owner" value="unselected-owner">
+                        Not selected
                       </option>
-                      <option value="52">Lorena</option>
-                      <option value="54">Nur</option>
+                      {this.props.owners.map((owner) => (
+                        <option key={owner.name} value={owner.name}>
+                          {owner.name}
+                        </option>
+                      ))}
                     </Form.Select>
                   </FloatingLabel>
                 </div>
@@ -95,7 +101,9 @@ class AddItem extends React.Component {
             <Row>
               <Col>
                 <div className="article d-flex justify-content-center">
-                  <Button size="lg">Save Item</Button>
+                  <Button size="lg" key="save-item" onClick={this.saveItem}>
+                    Save Item
+                  </Button>
                 </div>
               </Col>
             </Row>
