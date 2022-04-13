@@ -5,6 +5,7 @@ import AddItem from "./AddItem";
 import Home from "./Home";
 import About from "./About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "../node_modules/hamburgers/dist/hamburgers.css";
 import Breadcrumbs from "./Breadcrumb";
 import bodyURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/icons8-onesies-100.png";
@@ -20,6 +21,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+
     this.state = {
       apiResponse: "",
       babyName: "Laia",
@@ -106,12 +108,6 @@ class App extends React.Component {
     console.log("handleClick() has been called");
   }
 
-  saveItem() {
-    // Changing state
-    this.setState({ totalStock: this.state.totalStock + 1 });
-    console.log("saveItem() has been called");
-  }
-
   render() {
     return (
       <div className="App">
@@ -120,7 +116,8 @@ class App extends React.Component {
           <Breadcrumbs />
           <Routes>
             <Route
-              index
+              exact
+              path="/"
               element={
                 <Home
                   babyName={this.state.babyName}
@@ -128,22 +125,26 @@ class App extends React.Component {
                   totalStock={this.state.totalStock}
                   typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
-                  saveItem={this.saveItem}
+                  clothesType={this.state.clothesType}
                 />
               }
             />
+
             <Route
-              path="add-item"
+              exact
+              path="/clothes/:id"
               element={
                 <AddItem
                   clothesSize={this.state.clothesSize}
                   babyName={this.state.babyName}
                   clothesSeason={this.state.clothesSeason}
                   clothesState={this.state.clothesState}
+                  clothesType={this.state.clothesType}
                   owners={this.state.owners}
                 />
               }
             />
+
             <Route path="about" element={<About />} />
           </Routes>
         </Router>

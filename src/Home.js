@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Home.css";
 import { Link } from "react-router-dom";
+
 class Home extends React.Component {
   render() {
     return (
@@ -31,10 +32,9 @@ class Home extends React.Component {
               <Row>
                 {this.props.typeOfClothes.map((clothes) => (
                   <Link
-                    to="/add-item"
+                    to={`/clothes/${clothes.type}`}
                     className="custom-btn paragraph col"
                     key={clothes.type}
-                    saveItem={this.props.saveItem}
                   >
                     <img alt={clothes.type} src={clothes.imgUrl} />
                     Add {clothes.type}
