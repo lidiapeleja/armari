@@ -4,7 +4,12 @@ import Navigation from "./Navigation";
 import AddItem from "./AddItem";
 import Home from "./Home";
 import About from "./About";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+} from "react-router-dom";
 
 import "../node_modules/hamburgers/dist/hamburgers.css";
 import Breadcrumbs from "./Breadcrumb";
@@ -143,7 +148,8 @@ class App extends React.Component {
                   owners={this.state.owners}
                 />
               }
-            ></Route>
+            />
+
             <Route path="about" element={<About />}></Route>
           </Routes>
         </Router>
