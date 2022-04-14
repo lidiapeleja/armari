@@ -4,12 +4,9 @@ import Navigation from "./Navigation";
 import AddItem from "./AddItem";
 import Home from "./Home";
 import About from "./About";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useParams,
-} from "react-router-dom";
+import Clothes from "./Clothes";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "../node_modules/hamburgers/dist/hamburgers.css";
 import Breadcrumbs from "./Breadcrumb";
@@ -62,35 +59,35 @@ class App extends React.Component {
       ],
       clothesType: [
         {
-          type: "body",
+          type: "Body",
           imgUrl: String(bodyURL),
         },
         {
-          type: "leggins",
+          type: "Leggins",
           imgUrl: String(legginsURL),
         },
         {
-          type: "shirt",
+          type: "Shirt",
           imgUrl: String(shirtURL),
         },
         {
-          type: "dress",
+          type: "Dress",
           imgUrl: String(dressURL),
         },
         {
-          type: "pijamas",
+          type: "Pijamas",
           imgUrl: String(pijamasURL),
         },
         {
-          type: "jaquet",
+          type: "Jaquet",
           imgUrl: String(jacketURL),
         },
         {
-          type: "socks",
+          type: "Socks",
           imgUrl: String(socksURL),
         },
         {
-          type: "shoes",
+          type: "Shoes",
           imgUrl: String(shoesURL),
         },
       ],
@@ -134,7 +131,20 @@ class App extends React.Component {
                 />
               }
             ></Route>
-
+            <Route
+              exact
+              path="/clothes/"
+              element={
+                <Clothes
+                  babyName={this.state.babyName}
+                  currentBabySize={this.state.currentBabySize}
+                  totalStock={this.state.totalStock}
+                  typeOfClothes={this.state.clothesType}
+                  clothesURL={this.state.clothesType.img}
+                  clothesType={this.state.clothesType}
+                />
+              }
+            ></Route>
             <Route
               exact
               path="/clothes/:clothes"
@@ -153,7 +163,7 @@ class App extends React.Component {
             <Route path="about" element={<About />}></Route>
           </Routes>
         </Router>
-        <p className="App-intro">;{this.state.apiResponse}</p>
+        <p className="App-intro">{this.state.apiResponse}</p>
       </div>
     );
   }
