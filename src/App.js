@@ -128,11 +128,11 @@ class App extends React.Component {
                   clothesType={this.state.clothesType}
                 />
               }
-            />
+            ></Route>
 
             <Route
               exact
-              path="/clothes/:id"
+              path="/clothes/:clothes"
               element={
                 <AddItem
                   clothesSize={this.state.clothesSize}
@@ -143,9 +143,8 @@ class App extends React.Component {
                   owners={this.state.owners}
                 />
               }
-            />
-
-            <Route path="about" element={<About />} />
+            ></Route>
+            <Route path="about" element={<About />}></Route>
           </Routes>
         </Router>
         <p className="App-intro">;{this.state.apiResponse}</p>
