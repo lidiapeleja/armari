@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import ClothesCard from "./ClothesCard";
 
@@ -14,44 +14,43 @@ function Clothes(props) {
           <Col>
             <div className="section">
               <h2 className="text-center">Body</h2>
-              <div className="paragraph">
-                <Row>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <Col>
-                      <ClothesCard></ClothesCard>
-                    </Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                </Row>
-              </div>
+              <Row xs={2} md={3} lg={4}>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+              </Row>
             </div>
             <div className="section">
               <h2 className="text-center">Leggins</h2>
-              <div className="paragraph">
-                <Row>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                  <Col>
-                    <ClothesCard></ClothesCard>
-                  </Col>
-                </Row>
-              </div>
+              <Row xs={2} md={3} lg={4}>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+                <Col>
+                  <ClothesCard></ClothesCard>
+                </Col>
+              </Row>
             </div>
           </Col>
         </Row>

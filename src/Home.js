@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
@@ -9,20 +9,18 @@ class Home extends React.Component {
       <Container className="paragraph text-center" fluid="md">
         <Row>
           <Col>
-            <h1>
-              <code>{this.props.babyName}</code>'s Wardrobe
-            </h1>
+            <h1>{this.props.babyName}'s Wardrobe</h1>
             <Row className="justify-content-md-center">
               <Col xs lg="6">
                 <Card className="section">
                   <Card.Body>
                     <h6>
-                      {this.props.babyName}'s Size:
-                      <code>{this.props.currentBabySize}</code>
+                      {this.props.babyName}'s Size:{" "}
+                      <Badge bg="info">{this.props.currentBabySize}</Badge>
                     </h6>
                     <h4>
-                      Clothes in wardrobe:
-                      <code> {this.props.totalStock} items</code>
+                      Clothes in wardrobe:{" "}
+                      <Badge bg="info">{this.props.totalStock} items</Badge>
                     </h4>
                   </Card.Body>
                 </Card>

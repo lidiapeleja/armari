@@ -18,8 +18,8 @@ function AddItem(props) {
     <Container className="section">
       <h1>Add New {clothes} </h1>
       <Container fluid="md">
-        <Row>
-          <Col xs={12} md={6}>
+        <Row className="d-flex justify-content-center">
+          <Col xs={12} md={4}>
             <div className="section">
               <FloatingLabel controlId="floatingSize" label="Select size*">
                 <Form.Select aria-label="Size">
@@ -85,7 +85,7 @@ function AddItem(props) {
               </Form.Group>
             </div>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={4}>
             <div className="paragraph upload-image">
               <img alt="bla blabla" src={String(uploadImg)} />
             </div>
