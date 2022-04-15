@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import "./Navigation.css";
 import { Link } from "react-router-dom";
 
 class Navigation extends React.Component {
@@ -12,7 +13,10 @@ class Navigation extends React.Component {
         <Navbar expand={false}>
           <Container fluid>
             <Navbar.Brand>
-              <Link to="/"> Armari App</Link>
+              <Link className="text-dark" to="/">
+                {" "}
+                Armari App
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
@@ -22,15 +26,26 @@ class Navigation extends React.Component {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel">
-                  <Link to="/"> Armari App</Link>
+                  <Link className="text-dark" to="/">
+                    {" "}
+                    Armari App
+                  </Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link to="/">Home</Link>
-                  <Link to="/add-item">Add New Clothe</Link>
-                  <Link to="/settings">Settings</Link>
-                  <Link to="/about">About Armari App</Link>
+                  <Link className="text-dark" to="/">
+                    Home
+                  </Link>
+                  <Link className="text-dark" to="/add-item">
+                    Add New Clothe
+                  </Link>
+                  <Link className="text-dark" to="/settings">
+                    Settings
+                  </Link>
+                  <Link className="text-dark" to="/about">
+                    About Armari App
+                  </Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

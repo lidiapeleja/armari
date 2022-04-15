@@ -28,7 +28,7 @@ class App extends React.Component {
 
     this.state = {
       apiResponse: "",
-      babyName: "",
+      babyName: "Laia",
       currentBabySize: 50,
       totalStock: 0,
       clothesSize: [
@@ -108,10 +108,6 @@ class App extends React.Component {
 
   handleNameChange(event) {
     this.setState({ babyName: event.target.value });
-    console.log("Name has been changed. Event: ");
-    console.log(event);
-    console.log("Event Target: ");
-    console.log(event.target);
   }
   handleNameSubmit(event) {
     alert("A name was submitted: " + this.state.babyName);

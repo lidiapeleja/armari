@@ -1,0 +1,15 @@
+.navbar-nav a {
+    text-decoration: none;
+}
+
+.offcanvas-title a {
+    text-decoration: none;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #212529;
+}

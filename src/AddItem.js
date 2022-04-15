@@ -17,7 +17,7 @@ function AddItem(props) {
   return (
     <Container className="section">
       <h1>
-        Add New <span class="text-capitalize">{clothes}</span>{" "}
+        Add New <span className="text-capitalize">{clothes}</span>{" "}
       </h1>
       <Container fluid="md">
         <Row className="d-flex justify-content-center">
@@ -38,7 +38,7 @@ function AddItem(props) {
             </div>
             <div className="paragraph">
               Select Clothe's season*
-              <ButtonGroup size="lg" className="mb-2">
+              <ButtonGroup className="mb-2">
                 {props.clothesSeason.map((season) => (
                   <Button variant="outline-dark" value={season} key={season}>
                     {season}
@@ -62,7 +62,7 @@ function AddItem(props) {
             </div>
             <div className="paragraph d-flex flex-column">
               Select Clothe's State
-              <ButtonGroup size="lg" className="mb-2">
+              <ButtonGroup className="mb-2">
                 {props.clothesState.map((state) => (
                   <Button variant="outline-dark" value={state} key={state}>
                     {state}
