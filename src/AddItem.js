@@ -16,7 +16,9 @@ function AddItem(props) {
   const { clothes } = useParams();
   return (
     <Container className="section">
-      <h1>Add New {clothes} </h1>
+      <h1>
+        Add New <span class="text-capitalize">{clothes}</span>{" "}
+      </h1>
       <Container fluid="md">
         <Row className="d-flex justify-content-center">
           <Col xs={12} md={4}>
@@ -50,7 +52,7 @@ function AddItem(props) {
                   <option key="unselected-owner" value="unselected-owner">
                     Not selected
                   </option>
-                  {props.owners.map((owner) => (
+                  {props.owner.map((owner) => (
                     <option key={owner.name} value={owner.name}>
                       {owner.name}
                     </option>

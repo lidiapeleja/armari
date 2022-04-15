@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Ratio, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Card, Ratio, ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import uploadImg from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armari/src/img/body.jpg";
 import "./ClothesCard.css";
 
@@ -23,7 +23,9 @@ function ClothesCard(props) {
             <strong>Season:</strong> at eros
           </ListGroupItem>
         </ListGroup>
-        <Card.Link href="#">More Info</Card.Link>
+        <Button className="paragraph" variant="outline-dark">
+          More info
+        </Button>
       </Card.Body>
       <Card.Footer>
         <Card.Link className="text-danger small" href="#">

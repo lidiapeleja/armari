@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import AddItem from "./AddItem";
 import Home from "./Home";
+import Settings from "./Settings";
 import About from "./About";
 import Clothes from "./Clothes";
 
@@ -22,11 +23,12 @@ import shoesURL from "/Users/lidiapeleja/Documents/webProjects/armari-laia/armar
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleNameSubmit = this.handleNameSubmit.bind(this);
 
     this.state = {
       apiResponse: "",
-      babyName: "Laia",
+      babyName: "",
       currentBabySize: 50,
       totalStock: 0,
       clothesSize: [
@@ -35,7 +37,7 @@ class App extends React.Component {
       clothesSeason: ["Summer Season", "Fall/Spring Season", "Winter Season"],
       clothesState: ["new", "used"],
       shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
-      owners: [
+      owner: [
         {
           name: "Lorena",
           phoneNumber: +4917621660725,
@@ -59,35 +61,35 @@ class App extends React.Component {
       ],
       clothesType: [
         {
-          type: "Body",
+          type: "body",
           imgUrl: String(bodyURL),
         },
         {
-          type: "Leggins",
+          type: "leggins",
           imgUrl: String(legginsURL),
         },
         {
-          type: "Shirt",
+          type: "shirt",
           imgUrl: String(shirtURL),
         },
         {
-          type: "Dress",
+          type: "dress",
           imgUrl: String(dressURL),
         },
         {
-          type: "Pijamas",
+          type: "pijamas",
           imgUrl: String(pijamasURL),
         },
         {
-          type: "Jaquet",
+          type: "jaquet",
           imgUrl: String(jacketURL),
         },
         {
-          type: "Socks",
+          type: "socks",
           imgUrl: String(socksURL),
         },
         {
-          type: "Shoes",
+          type: "shoes",
           imgUrl: String(shoesURL),
         },
       ],
@@ -104,10 +106,16 @@ class App extends React.Component {
     this.callAPI();
   }
 
-  handleClick() {
-    // Changing state
-    this.setState({ totalStock: this.state.totalStock + 1 });
-    console.log("handleClick() has been called");
+  handleNameChange(event) {
+    this.setState({ babyName: event.target.value });
+    console.log("Name has been changed. Event: ");
+    console.log(event);
+    console.log("Event Target: ");
+    console.log(event.target);
+  }
+  handleNameSubmit(event) {
+    alert("A name was submitted: " + this.state.babyName);
+    event.preventDefault();
   }
 
   render() {
@@ -155,11 +163,20 @@ class App extends React.Component {
                   clothesSeason={this.state.clothesSeason}
                   clothesState={this.state.clothesState}
                   clothesType={this.state.clothesType}
-                  owners={this.state.owners}
+                  owner={this.state.owner}
                 />
               }
             />
-
+            <Route
+              path="settings"
+              element={
+                <Settings
+                  clothesSize={this.state.clothesSize}
+                  handleNameChange={this.handleNameChange}
+                  handleNameSubmit={this.handleNameSubmit}
+                />
+              }
+            ></Route>
             <Route path="about" element={<About />}></Route>
           </Routes>
         </Router>
