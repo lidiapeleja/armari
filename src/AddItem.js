@@ -53,9 +53,13 @@ function AddItem(props) {
                     Not selected
                   </option>
                   {props.owner.map((owner) => (
-                    <option key={owner.name} value={owner.name}>
+                    <Button
+                      variant="outline-dark"
+                      key={owner.name}
+                      value={owner.name}
+                    >
                       {owner.name}
-                    </option>
+                    </Button>
                   ))}
                 </Form.Select>
               </FloatingLabel>
@@ -77,7 +81,7 @@ function AddItem(props) {
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Label>Comments</Form.Label>
-                <Form.Control as="textarea" rows={4} />
+                <Form.Control as="textarea" rows={3} />
               </Form.Group>
             </div>
             <div className="paragraph">

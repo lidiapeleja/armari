@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import ClothesCard from "./ClothesCard";
 
 function Clothes(props) {
@@ -7,7 +7,25 @@ function Clothes(props) {
     <Container className="section">
       <Container fluid="md">
         <h1>Your guardrobe:</h1>
-
+        <Row>
+          <Col>
+            Filters:
+            <ButtonGroup aria-label="Filter Season">
+              {props.clothesSeason.map((season) => (
+                <Button variant="secondary" value={season} key={season}>
+                  {season}
+                </Button>
+              ))}
+            </ButtonGroup>
+            <ButtonGroup aria-label="Filter Owner">
+              {props.owner.map((owner) => (
+                <Button variant="secondary" value={owner.name} key={owner.name}>
+                  {owner.name}
+                </Button>
+              ))}
+            </ButtonGroup>
+          </Col>
+        </Row>
         <Row>
           <Col>
             <div className="section">

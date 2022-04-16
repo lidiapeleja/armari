@@ -34,7 +34,7 @@ class App extends React.Component {
       clothesSize: [
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
       ],
-      clothesSeason: ["Summer Season", "Fall/Spring Season", "Winter Season"],
+      clothesSeason: ["Summer", "Fall/Spring", "Winter"],
       clothesState: ["new", "used"],
       shoesSize: [4, 6, 8, 10, 12, 14, 16, 18, 20],
       owner: [
@@ -146,6 +146,8 @@ class App extends React.Component {
                   typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
                   clothesType={this.state.clothesType}
+                  clothesSeason={this.state.clothesSeason}
+                  owner={this.state.owner}
                 />
               }
             ></Route>

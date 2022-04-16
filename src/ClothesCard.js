@@ -24,12 +24,15 @@ function ClothesCard(props) {
           </ListGroupItem>
         </ListGroup>
         <Button className="paragraph" variant="outline-dark">
-          More info
+          Read more
         </Button>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer className="d-flex justify-content-between">
+        <Card.Link className="text-muted small" href="#">
+          Edit
+        </Card.Link>
         <Card.Link className="text-danger small" href="#">
-          Delate item
+          Delate
         </Card.Link>
       </Card.Footer>
     </Card>
