@@ -143,7 +143,6 @@ class App extends React.Component {
                   babyName={this.state.babyName}
                   currentBabySize={this.state.currentBabySize}
                   totalStock={this.state.totalStock}
-                  typeOfClothes={this.state.clothesType}
                   clothesURL={this.state.clothesType.img}
                   clothesType={this.state.clothesType}
                   clothesSeason={this.state.clothesSeason}

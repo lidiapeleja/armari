@@ -33,7 +33,7 @@ class Settings extends React.Component {
               <FloatingLabel
                 className="paragraph"
                 controlId="floatingSize"
-                label="Select baby's size*"
+                label="Select current baby's size*"
               >
                 <Form.Select aria-label="Size">
                   <option key="unselected-size" value="unselected-size">

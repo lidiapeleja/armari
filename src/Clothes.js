@@ -6,7 +6,7 @@ function Clothes(props) {
   return (
     <Container className="section">
       <Container fluid="md">
-        <h1>Your guardrobe:</h1>
+        <h1>{props.babyName}'s guardrobe:</h1>
         <Row className="mt-4">
           <Col>
             <ButtonGroup className=" me-3 paragraph" aria-label="Filter Season">
@@ -40,6 +40,23 @@ function Clothes(props) {
               {props.clothesSize.map((size) => (
                 <Button variant="outline-success" value={size} key={size}>
                   {size}
+                </Button>
+              ))}
+            </ButtonGroup>
+            <ButtonGroup
+              className="display-inline-block paragraph"
+              aria-label="Filter Type of Clothes"
+            >
+              <span className="d-flex align-items-center me-1">
+                Type of Clothes:{" "}
+              </span>
+              {props.clothesType.map((type) => (
+                <Button
+                  variant="outline-success"
+                  value={type.type}
+                  key={type.type}
+                >
+                  {type.type}
                 </Button>
               ))}
             </ButtonGroup>
