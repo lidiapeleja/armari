@@ -4,11 +4,13 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var cors = require("cors");
+var mongoose = require("mongoose");
+
+require("dotenv").config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var testAPIRouter = require("./routes/testAPI");
-var testHelloRouter = require("./routes/hello");
 
 var app = express();
 
@@ -41,6 +43,14 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
+});
+
+// Connect to Mongoose
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri);
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfully");
 });
 
 module.exports = app;
