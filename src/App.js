@@ -102,8 +102,15 @@ class App extends React.Component {
       .then((res) => this.setState({ apiResponse: res }));
   }
 
+  callHelloAPI() {
+    fetch("http://localhost:9000/hello")
+      .then((res) => res.text())
+      .then((res) => this.setState({ apiHelloResponse: res }));
+  }
+
   componentWillMount() {
     this.callAPI();
+    this.callHelloAPI();
   }
 
   handleNameChange(event) {
@@ -166,7 +173,7 @@ class App extends React.Component {
               }
             />
             <Route
-              path="settings"
+              path="/settings"
               element={
                 <Settings
                   clothesSize={this.state.clothesSize}
@@ -175,7 +182,7 @@ class App extends React.Component {
                 />
               }
             ></Route>
-            <Route path="about" element={<About />}></Route>
+            <Route path="/about" element={<About />}></Route>
           </Routes>
         </Router>
         <p className="App-intro">{this.state.apiResponse}</p>

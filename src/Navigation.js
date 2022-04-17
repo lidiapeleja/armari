@@ -34,9 +34,6 @@ class Navigation extends React.Component {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link className="text-dark" to="/">
-                    Home
-                  </Link>
                   <Link className="text-dark" to="/add-item">
                     Add New Clothe
                   </Link>

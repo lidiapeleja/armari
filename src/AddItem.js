@@ -53,13 +53,13 @@ function AddItem(props) {
                     Not selected
                   </option>
                   {props.owner.map((owner) => (
-                    <Button
+                    <option
                       variant="outline-dark"
                       key={owner.name}
                       value={owner.name}
                     >
                       {owner.name}
-                    </Button>
+                    </option>
                   ))}
                 </Form.Select>
               </FloatingLabel>
