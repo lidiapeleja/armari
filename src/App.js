@@ -148,6 +148,7 @@ class App extends React.Component {
                   clothesType={this.state.clothesType}
                   clothesSeason={this.state.clothesSeason}
                   owner={this.state.owner}
+                  clothesSize={this.state.clothesSize}
                 />
               }
             ></Route>

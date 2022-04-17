@@ -7,20 +7,39 @@ function Clothes(props) {
     <Container className="section">
       <Container fluid="md">
         <h1>Your guardrobe:</h1>
-        <Row>
+        <Row className="mt-4">
           <Col>
-            Filters:
-            <ButtonGroup aria-label="Filter Season">
+            <ButtonGroup className=" me-3 paragraph" aria-label="Filter Season">
+              <span className="d-flex align-items-center me-1">Season: </span>
               {props.clothesSeason.map((season) => (
-                <Button variant="secondary" value={season} key={season}>
+                <Button variant="outline-success" value={season} key={season}>
                   {season}
                 </Button>
               ))}
             </ButtonGroup>
-            <ButtonGroup aria-label="Filter Owner">
+            <ButtonGroup
+              className="display-inline-block paragraph"
+              aria-label="Filter Owner"
+            >
+              <span className="d-flex align-items-center me-1">Owner: </span>
               {props.owner.map((owner) => (
-                <Button variant="secondary" value={owner.name} key={owner.name}>
+                <Button
+                  variant="outline-success"
+                  value={owner.name}
+                  key={owner.name}
+                >
                   {owner.name}
+                </Button>
+              ))}
+            </ButtonGroup>
+            <ButtonGroup
+              className="display-inline-block paragraph"
+              aria-label="Filter Size"
+            >
+              <span className="d-flex align-items-center me-1">Size: </span>
+              {props.clothesSize.map((size) => (
+                <Button variant="outline-success" value={size} key={size}>
+                  {size}
                 </Button>
               ))}
             </ButtonGroup>
