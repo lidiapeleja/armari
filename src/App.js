@@ -33,6 +33,7 @@ class App extends React.Component {
       totalStock: 0,
       clothesSize: [
         46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80,
+        82, 84, 86, 88, 90, 92, 94, 96, 98,
       ],
       clothesSeason: ["Summer", "Fall/Spring", "Winter"],
       clothesState: ["new", "used"],
@@ -102,15 +103,8 @@ class App extends React.Component {
       .then((res) => this.setState({ apiResponse: res }));
   }
 
-  callHelloAPI() {
-    fetch("http://localhost:9000/hello")
-      .then((res) => res.text())
-      .then((res) => this.setState({ apiHelloResponse: res }));
-  }
-
   componentWillMount() {
     this.callAPI();
-    this.callHelloAPI();
   }
 
   handleNameChange(event) {
